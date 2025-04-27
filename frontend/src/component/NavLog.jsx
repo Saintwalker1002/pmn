@@ -2,11 +2,16 @@ import { Link } from 'react-router-dom';
 
 function NavLog() {
   return (
-    <nav style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem', background: '#eee' }}>
-      <Link to="/" style={{ textDecoration: 'none', fontWeight: 'bold' }}>Mi Sitio</Link>
-      <div style={{ display: 'flex', gap: '1rem' }}>
-        <Link to="/">Login</Link>
-        <Link to="/home">Home</Link>
+    <nav className="bg-blue-900 p-4 flex items-center justify-between">
+      <div className="text-white font-bold text-xl">Logo</div>
+      <div className="flex space-x-4">
+        <Link to="/" className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-md transition">
+          Logout
+        </Link>
+        <Link to="/home" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md transition">
+          Home
+        </Link>
+        <Link to="/Reservas" className="bg-red-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md transition">Reservas</Link>
       </div>
     </nav>
   );
